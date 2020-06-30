@@ -28,7 +28,7 @@ public class MotoristaController {
 	private MotoristaRepository motoristaRepositrory;
 	
 	@PostMapping
-	@ResponseStatus(value = HttpStatus.OK)
+	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	public Motorista cadastra(@RequestBody Motorista motorista ) {
 		motorista.setTipoCaminhao(TipoCaminhao.CAMINHAO_TOCO);
 		motoristaRepositrory.save(motorista);
@@ -37,6 +37,7 @@ public class MotoristaController {
 	}
 	
 	@GetMapping("/carregado{carregado}")
+	@ResponseStatus(value = HttpStatus.OK)
 	public List<Motorista> listMotorista(@RequestParam(name="carregado") Boolean carregado){
 	
 		return motoristaRepositrory.listMotorista(carregado);

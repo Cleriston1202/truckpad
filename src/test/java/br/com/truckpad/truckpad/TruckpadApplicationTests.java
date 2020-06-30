@@ -36,5 +36,15 @@ class TruckpadApplicationTests {
 		m.setVeculoPropio(true);
 		motoristaRepository.save(m);
 	}
+	
+	@Test
+	public void consultarMotoristaComCarga() {
+		motoristaRepository.listMotorista(true);
+	}
+	
+	@Test
+	public void consultarMotoristaComVeiculoPropio() {
+		motoristaRepository.listMotoristaComVeiculoPropio(false);
+	}
 
 }
