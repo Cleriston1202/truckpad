@@ -28,7 +28,8 @@ http://localhost:8080/motoristas/carregado?carregado=false
 #Consultar Motorista com Veiculo propio
 http://localhost:8080/motoristas/veiculo?propio=true
 
-
+#Atualizar Motorista (Passando o json no corpo da requisição
+http://localhost:8080/motoristas/1
 
 Aplication.properties para configuração do banco de dados, usar o usuario e senha criado no banco de dados
 #Criar o banco de dados (truckpad)
@@ -47,7 +48,7 @@ spring.datasource.password=
 
 
 
-Arquivo Pom xml configuração das dependencias do projeto
+#Arquivo Pom xml configuração das dependencias do projeto
 
 #################################################################
 
