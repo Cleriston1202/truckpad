@@ -31,7 +31,7 @@ public class MotoristaController {
 	private MotoristaRepository motoristaRepositrory;
 	
 	@PostMapping
-	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	@ResponseStatus(value = HttpStatus.CREATED)
 	public Motorista cadastra(@RequestBody Motorista motorista ) {
 		motorista.setTipoCaminhao(TipoCaminhao.CAMINHAO_TOCO);
 		motoristaRepositrory.save(motorista);
